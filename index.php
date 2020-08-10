@@ -12,13 +12,13 @@ if (!empty($config['access_token'])) {
 echo "<h1>Get Profiles</h1>";
 print_r($user);
 
+$vdo = $lib->request('/videos/446383307');
+echo "<h1>Get VDO</h1>";
+print_r($vdo);
+
 $listvdo = $lib->request('/me/videos');
 echo "<h1>List VDO</h1>";
 print_r($listvdo);
-
-$vdo = $lib->request('/videos/385198817');
-echo "<h1>Get VDO</h1>";
-print_r($vdo);
 
 
 foreach($listvdo["body"]["data"] as $live) {
